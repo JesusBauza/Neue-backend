@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_credito_2_credito_2s",
+  "info": {
+    "displayName": "Credito_2",
+    "icon": "underline"
+  },
+  "options": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "profesions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profesion.profesion"
+    }
+  },
+  "config": {}
+}

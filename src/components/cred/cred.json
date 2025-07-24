@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cred_creds",
+  "info": {
+    "displayName": "Cred"
+  },
+  "options": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Profesion1": {
+      "type": "string"
+    },
+    "Profesion2": {
+      "type": "string"
+    },
+    "Profesion3": {
+      "type": "string"
+    },
+    "Profesion4": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
