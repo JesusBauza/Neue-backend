@@ -24,9 +24,6 @@
       "target": "api::servicio.servicio",
       "mappedBy": "proyectos"
     },
-    "Year": {
-      "type": "string"
-    },
     "Cover": {
       "type": "media",
       "multiple": false,
@@ -87,6 +84,9 @@
       "relation": "manyToMany",
       "target": "api::proyecto.proyecto",
       "mappedBy": "related_works"
+    },
+    "Year": {
+      "type": "integer"
     }
   }
 }
