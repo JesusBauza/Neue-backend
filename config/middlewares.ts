@@ -24,7 +24,7 @@ export default [
       origin: [
         'http://localhost:3000', 
         'http://127.0.0.1:3000',
-        // Añade aquí otras URLs de frontend si las tienes
+        'http://neueidea.com'
       ],
     },
   },
