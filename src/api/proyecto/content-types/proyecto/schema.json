@@ -11,6 +11,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Id_titulo": {
+      "type": "string"
+    },
     "Titulo": {
       "type": "text",
       "required": true

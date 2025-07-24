@@ -543,6 +543,7 @@ export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
     Home_Cover: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    Id_titulo: Schema.Attribute.String;
     Info: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
