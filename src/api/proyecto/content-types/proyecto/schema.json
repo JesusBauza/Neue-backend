@@ -4,7 +4,8 @@
   "info": {
     "singularName": "proyecto",
     "pluralName": "proyectos",
-    "displayName": "Proyecto"
+    "displayName": "Proyecto",
+    "mainField": "Id_titulo"
   },
   "options": {
     "draftAndPublish": true
