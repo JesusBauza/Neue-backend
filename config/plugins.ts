@@ -2,34 +2,37 @@
 
 // Define la forma del parámetro de entrada, específicamente la función `env`.
 interface StrapiEnv {
-  env: (key: string, defaultValue?: any) => string;
+  env: (key: string, defaultValue?: any) => any; // Usamos 'any' para más flexibilidad
 }
 
 // Define la estructura de la configuración de carga (upload).
 interface UploadConfig {
   config: {
-    provider: 'cloudinary';
+    provider: string;
     providerOptions: {
       cloud_name: string;
       api_key: string;
       api_secret: string;
     };
-    actionOptions: {
-      upload?: object;
-      uploadStream?: object;
-      delete?: object;
-    };
+    actionOptions: object;
   };
 }
 
-// La configuración principal puede tener más propiedades.
+// --- NUEVO: Define la estructura para users-permissions ---
+interface UsersPermissionsConfig {
+  config: {
+    jwtSecret: string;
+  };
+}
+
+// La configuración principal ahora incluye ambos plugins.
 interface StrapiConfig {
   upload: UploadConfig;
-  // aquí podrías añadir la configuración de otro plugin, por ejemplo:
-  // 'another-plugin': { ... }
+  'users-permissions': UsersPermissionsConfig;
 }
 
 export default ({ env }: StrapiEnv): StrapiConfig => ({
+  // --- Tu configuración de Cloudinary (sin cambios) ---
   upload: {
     config: {
       provider: 'cloudinary',
@@ -43,6 +46,13 @@ export default ({ env }: StrapiEnv): StrapiConfig => ({
         uploadStream: {},
         delete: {},
       },
+    },
+  },
+  
+  // ▼▼▼ AQUÍ SE AÑADE LA NUEVA CONFIGURACIÓN ▼▼▼
+  'users-permissions': {
+    config: {
+      jwtSecret: env('jHMd9ca5hdMZDXdJkTRl/A=='),
     },
   },
 });
