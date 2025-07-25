@@ -523,6 +523,7 @@ export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
   collectionName: 'proyectos';
   info: {
     displayName: 'Proyecto';
+    mainField: 'Id_titulo';
     pluralName: 'proyectos';
     singularName: 'proyecto';
   };
@@ -543,7 +544,6 @@ export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
     Home_Cover: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    Id_titulo: Schema.Attribute.String;
     Info: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -574,7 +574,7 @@ export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Year: Schema.Attribute.Integer;
+    Year: Schema.Attribute.String;
   };
 }
 
